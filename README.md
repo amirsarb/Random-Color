@@ -1,3 +1,58 @@
+<div>
+  <h1 align="center">Random Color - React 🧑‍💻</h1>
+  <h2 align="center">This is a simple practice</h2>
+<h2>Goals</h2>
+  <ul>
+  <li>
+  Using a class based component with state
+  </li>
+  <li>
+  Practice for choosing a random color (very simple)
+  </li>
+  <li>
+  Render a component and passing props
+    </li>
+
+   </ul>
+
+  <p>
+    Screenshot:
+  </p>
+
+  <a href="">
+    <img
+      alt="Random Color"
+      src="screenshot.jpg"
+    />
+  </a>
+</div>
+
+<hr />
+
+## Requirements
+- NPM
+- React
+
+
+## Main Part
+```javascript
+ randomNumber(){
+
+    return Math.floor(Math.random()*this.props.colorList.length)
+  }
+
+    render(){
+
+        const colorBox = Array.from({length:this.props.boxNumbers}).map(()=>(
+            <Box color={this.props.colorList[this.randomNumber()]} colors={this.props.colorList}/>
+        ))
+
+        return(
+             <div className='BoxContainer'>{colorBox}</div>
+       )
+    }
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
